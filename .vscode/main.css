@@ -1,0 +1,270 @@
+/* reset box-sizing for all properties before starting */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  font-family: Arial, sans-serif;
+  font-stretch: normal;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: #111;
+  line-height: 1.2;
+  background-color: #fff;
+}
+
+.page-container {
+  width: 100vw;
+  min-height: fit-content;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.body-content-container {
+  max-width: 100vw;
+  min-width: fit-content;
+}
+
+/* Reset basic form properties for consistent starting point */
+form,
+label,
+input,
+select,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
+  background-color: transparent;
+  letter-spacing: 0;
+}
+
+.form-container {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  min-width: fit-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+form {
+  padding: 0 20px;
+  justify-content: center;
+  min-width: fit-content;
+}
+
+.inner-section-signin {
+  width: 380px;
+  border: 1px solid lightgrey;
+  padding: 6px 21px;
+}
+
+.form-title {
+  padding: 0;
+  margin: 0;
+}
+
+form h1 {
+  font-size: 27px;
+  font-weight: 500;
+  margin: 0 0 4px 0;
+  padding: 0 0 4px 0;
+}
+
+/* Base link properties */
+form a {
+  color: #1295ff; /* slightly lighter than standard blue */
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: -0.1px;
+}
+
+.help {
+  min-width: fit-content;
+}
+
+.triangle-bullet {
+  margin-left: 16px;
+  padding-right: 4px;
+}
+
+.label-row {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: space-between; /* Push items to opposite sides of row */
+  align-items: baseline;
+  margin-bottom: 8px;
+  margin-left: 0;
+  padding-left: 2px;
+  border: none;
+}
+
+label {
+  font-size: 13px;
+  letter-spacing: -0.4px;
+}
+
+.item-right a {
+  margin-right: 0;
+  padding-right: 2px;
+  letter-spacing: -0.1px;
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 32px;
+  margin-bottom: 24px;
+  padding: 8px;
+  color: #777;
+  background-color: #fff;
+  border: 1.2px solid #777;
+  border-radius: 1px;
+  cursor: text;
+  font-size: 15px;
+  letter-spacing: -0.5px;
+}
+
+/* Base button properties */
+button {
+  width: 100%;
+  height: 29px;
+  font-size: 14px;
+  color: #111;
+  cursor: pointer;
+  border: 1px solid #858585;
+  border-radius: 1px;
+}
+
+/* Modifier class for the Continue button */
+.continue {
+  background: #f7c548; /* gold */
+}
+
+/* Modifier class for the Create Account button */
+.create-account {
+  border-color: lightgrey;
+  background-color: #e7e9ec; /* ice blue */
+}
+
+.inner-section-help {
+  margin: 18px 0 14px 0;
+}
+
+.inner-section-msg {
+  width: 380px;
+  border: 1px solid #fff;
+  padding: 8px 12px;
+}
+
+/* Container for a decorative hr and overlain text */
+.decorative-hr-msg {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-bottom: 14px;
+  border: none;
+}
+
+/* The decorative hr that will sit behind the text */
+.decorative-hr-msg::before {
+  content: "";
+  position: absolute;
+  top: 50%; /* Vertically center hr behind text */
+  left: 0;
+  right: 0;
+  border-top: 1px solid #777;
+  z-index: 2;
+}
+
+/* Centered-text overlay with opaque bg to create broken hr effect */
+.decorative-hr-msg span {
+  background-color: #fff;
+  position: relative;
+  align-self: center;
+  margin: 0 auto; /* Center text horizontally without obscuring hr */
+  padding: 0 12px; /* Partial cover to create broken line effect */
+  font-size: 15px;
+  color: #777;
+  z-index: 2;
+  letter-spacing: -0.1px;
+}
+
+.prefooter {
+  padding-bottom: 36px;
+  margin: 4px 0;
+  width: 100vw;
+  height: 24px;
+  border-bottom: 2px solid #a3a7af; /* gray shade color-picked from mockup */
+}
+
+footer {
+  padding: 36px 0;
+  margin: 4px 0;
+  max-width: 100vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.footer-content-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section-links {
+  min-width: fit-content;
+  max-width: 100vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 24px;
+  border: none;
+}
+
+.footer-child a {
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: -0.2px;
+}
+
+.footer-child {
+  display: flex;
+}
+
+.footer-copyright-row {
+  margin-top: 28px;
+  display: flex;
+  font-size: 11.5px;
+  letter-spacing: -0.2px;
+  color: #000;
+}
